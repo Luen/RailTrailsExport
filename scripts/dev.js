@@ -9,6 +9,7 @@ const watchBuild = spawn(
         '--watch-path=maptogpx-core.js',
         '--watch-path=scripts/build.js',
         '--watch-path=scripts/export-runner.js',
+        '--watch-path=index.html',
         'scripts/build.js',
     ],
     { cwd: rootDir, stdio: 'inherit' },
