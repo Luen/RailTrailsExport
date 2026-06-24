@@ -162,8 +162,7 @@
         document.getElementById('dev-origin').textContent = location.origin
         sourceNote.textContent = 'Development script: ' + downloadScript
     } else {
-        sourceNote.textContent =
-            'Production script is loaded from ' + PROD_BASE + '/maptogpx.js'
+        sourceNote.remove()
     }
 })()
 </script>
