@@ -6,7 +6,7 @@ A bookmarklet that downloads trail map data from [railtrails.org.au](https://www
 
 1. Open [railtrails.luenwarneke.com](https://railtrails.luenwarneke.com).
 2. Drag the green **RailTrails GPX Exporter** button to your bookmarks bar.
-3. Go to a trail page on [railtrails.org.au](https://www.railtrails.org.au/trails/) and open the map.
+3. Go to a trail page on [railtrails.org.au](https://www.railtrails.org.au/trails/).
 4. Click the bookmarklet in your bookmarks bar to download the GPX file.
 
 The GPX file includes the trail name, description, elevation data, waypoints, and a link back to the trail page.
