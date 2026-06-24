@@ -1,0 +1,35 @@
+---
+description: RailTrailsExport bookmarklet — architecture, conventions, and coding standards
+alwaysApply: true
+---
+
+# RailTrailsExport
+
+Bookmarklet that exports GPX from [railtrails.org.au](https://www.railtrails.org.au) trail pages.
+
+## Architecture
+
+- **`maptogpx-core.js`** — source of truth for all export logic (testable via `module.exports`)
+- **`maptogpx.js`** — generated bookmarklet bundle; never edit by hand
+- **`scripts/build.js`** — strips exports and wraps core in an IIFE; run via `npm run build`
+- **`scripts/export-runner.js`** — bookmarklet bootstrap injected by the build
+
+After changing core or the export runner, run `npm run build` (or `npm test`, which builds first).
+
+## Data & GPX
+
+- Read only from page globals: `window.trail_paths`, `window.trail_elevations`, `window.trail_elevations_dist`, `window.trail_markers`, and the DOM
+- No external APIs; no `<time>` or other fields the site does not provide
+- Elevation: interpolate by cumulative distance along the profile only (no lat/lng exact-match)
+- GPX: one `<trk>` named after the trail, one `<trkseg>` per path segment
+
+## Deploy
+
+Upload built `maptogpx.js` to `https://railtrails.luenwarneke.com/maptogpx.js`.
+
+## Code style
+
+- **DRY** — extract shared helpers (XML building, geometry, elevation) rather than duplicating logic between core and build
+- **Minimal scope** — smallest correct change; don't refactor unrelated code
+- **Match existing style** — plain functions, `function` keyword, no unnecessary abstractions
+- **Tests** — add or update fixture tests in `test/` when export behaviour changes; run `npm test` before finishing
