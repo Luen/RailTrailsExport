@@ -1,0 +1,15 @@
+{
+  "name": "railtrails-export",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "serve": "node scripts/dev.js",
+    "test": "npm run build && node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}

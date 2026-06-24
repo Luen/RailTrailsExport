@@ -1,0 +1,45 @@
+{
+  "label": "Trail with temporarily closed sections",
+  "sourceUrl": "https://www.railtrails.org.au/trails/great-victorian-rail-trail/",
+  "html": "<!DOCTYPE html><html><head><title>Great Victorian Rail Trail – Rail Trails Australia</title></head><body><h2>Great Victorian Rail Trail</h2><div><span class=\"statIcn\">Location:</span><span>90km north of Melbourne</span></div><div><span class=\"statIcn\">Length:</span><span>135 km</span></div><div><span class=\"statIcn\">Surface:</span><span>Compacted earth, Fine gravel</span></div><div><span class=\"statIcn\">Start / End:</span><span>Tallarook to Alexandra and Mansfield</span></div><div class=\"custDtlRtCont\"><p>One of Victoria's longest rail trails at 134km, the Great Victorian traverses undulating farmland from the Goulburn River at Tallarook and Yea up to the High Country.</p><p>The central section has been affected by bushfires. Some sections are closed until further notice.</p></div></body></html>",
+  "trailPaths": [
+    {
+      "type": "current",
+      "data": [
+        { "lat": -37.09219, "lng": 145.104801 },
+        { "lat": -37.0935, "lng": 145.1062 }
+      ]
+    },
+    {
+      "type": "temp_closed",
+      "data": [
+        { "lat": -37.15, "lng": 145.2 },
+        { "lat": -37.152, "lng": 145.205 }
+      ]
+    },
+    {
+      "type": "former_railway",
+      "data": [
+        { "lat": -37.16, "lng": 145.21 }
+      ]
+    }
+  ],
+  "trailMarkers": [],
+  "trailElevations": [
+    { "point": { "lat": -37.09219, "lng": 145.104801 }, "elev": 174.85, "dist": 0 },
+    { "point": { "lat": -37.0935, "lng": 145.1062 }, "elev": 176.2, "dist": 0.2 },
+    { "point": { "lat": -37.15, "lng": 145.2 }, "elev": 310.5, "dist": 12.0 },
+    { "point": { "lat": -37.152, "lng": 145.205 }, "elev": 315.0, "dist": 12.5 },
+    { "point": { "lat": -37.16, "lng": 145.21 }, "elev": 320.1, "dist": 13.0 }
+  ],
+  "expect": {
+    "trailName": "Great Victorian Rail Trail",
+    "filename": "Great_Victorian_Rail_Trail.gpx",
+    "descriptionContains": ["longest rail trails", "Location: 90km north of Melbourne", "Length: 135 km", "Surface:", "Start / End:"],
+    "trkCount": 1,
+    "trksegCount": 3,
+    "waypointCount": 0,
+    "trackPointCount": 5,
+    "allTrackPointsHaveElevation": true
+  }
+}

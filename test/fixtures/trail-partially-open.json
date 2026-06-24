@@ -1,0 +1,66 @@
+{
+  "label": "Trail partially open",
+  "sourceUrl": "https://www.railtrails.org.au/trails/murchison-to-rushworth-rail-trail/",
+  "html": "<!DOCTYPE html><html><head><title>Waranga (Rushworth) Rail Trail – Rail Trails Australia</title></head><body><h2>Waranga (Rushworth) Rail Trail</h2><div><span class=\"statIcn\">Location:</span><span>Murchison, 160 km north of Melbourne</span></div><div><span class=\"statIcn\">Length:</span><span>11 km</span></div><div><span class=\"statIcn\">Surface:</span><span>Compacted gravel</span></div><div><span class=\"statIcn\">Start / End:</span><span>Murchison to Rushworth</span></div><div class=\"custDtlRtCont\"><p>Note: This trail is partially open – it is due for completion to Rushworth in April 2025.</p><p>The open section from Murchison to Channel Inlet Rd offers lake views and good interpretive signage along a compacted gravel surface.</p></div></body></html>",
+  "trailPaths": [
+    {
+      "type": "current",
+      "data": [
+        { "lat": -36.4651, "lng": 145.2142 },
+        { "lat": -36.4662, "lng": 145.2168 }
+      ]
+    },
+    {
+      "type": "possible_trail",
+      "data": [
+        { "lat": -36.4701, "lng": 145.2201 },
+        { "lat": -36.4725, "lng": 145.2255 }
+      ]
+    },
+    {
+      "type": "former_railway",
+      "data": [
+        { "lat": -36.475, "lng": 145.23 }
+      ]
+    },
+    {
+      "type": "other_trail",
+      "data": [
+        { "lat": -36.478, "lng": 145.235 }
+      ]
+    },
+    {
+      "type": "on_road",
+      "data": [
+        { "lat": -36.48, "lng": 145.24 }
+      ]
+    }
+  ],
+  "trailMarkers": [
+    {
+      "lat": -36.4651,
+      "lng": 145.2142,
+      "des_plain": "Murchison trailhead",
+      "des": "Murchison trailhead"
+    }
+  ],
+  "trailElevations": [
+    { "point": { "lat": -36.4651, "lng": 145.2142 }, "elev": 120.5, "dist": 0 },
+    { "point": { "lat": -36.4662, "lng": 145.2168 }, "elev": 121.0, "dist": 0.3 },
+    { "point": { "lat": -36.4701, "lng": 145.2201 }, "elev": 122.4, "dist": 0.8 },
+    { "point": { "lat": -36.4725, "lng": 145.2255 }, "elev": 123.1, "dist": 1.1 },
+    { "point": { "lat": -36.475, "lng": 145.23 }, "elev": 124.0, "dist": 1.4 },
+    { "point": { "lat": -36.478, "lng": 145.235 }, "elev": 125.2, "dist": 1.8 },
+    { "point": { "lat": -36.48, "lng": 145.24 }, "elev": 126.0, "dist": 2.1 }
+  ],
+  "expect": {
+    "trailName": "Waranga (Rushworth) Rail Trail",
+    "filename": "Waranga_Rushworth_Rail_Trail.gpx",
+    "descriptionContains": ["open section from Murchison", "Location:", "Length: 11 km", "Surface:", "Start / End:"],
+    "trkCount": 1,
+    "trksegCount": 5,
+    "waypointCount": 1,
+    "trackPointCount": 7,
+    "allTrackPointsHaveElevation": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "label": "Trail open",
+  "sourceUrl": "https://www.railtrails.org.au/trails/murray-to-mountains-rail-trail/",
+  "html": "<!DOCTYPE html><html><head><title>Murray to Mountains Rail Trail – Rail Trails Australia</title></head><body><h2>Murray to Mountains Rail Trail</h2><div><span class=\"statIcn\">Location:</span><span>Beechworth, 280 km north-east of Melbourne</span></div><div><span class=\"statIcn\">Length:</span><span>116 km</span></div><div><span class=\"statIcn\">Surface:</span><span>Compacted gravel</span></div><div><span class=\"statIcn\">Start / End:</span><span>Wangaratta to Beechworth and beyond</span></div><div class=\"custDtlRtCont\"><p>One of Australia's premier rail trails, the Murray to Mountains Rail Trail passes through beautiful valleys and historic towns in north-east Victoria.</p></div></body></html>",
+  "trailPaths": [
+    {
+      "type": "current",
+      "data": [
+        { "lat": -36.35812, "lng": 146.31245 },
+        { "lat": -36.35901, "lng": 146.31422 },
+        { "lat": -36.36088, "lng": 146.31801 }
+      ]
+    },
+    {
+      "type": "on_road",
+      "data": [
+        { "lat": -36.3615, "lng": 146.3201 },
+        { "lat": -36.3622, "lng": 146.3215 }
+      ]
+    }
+  ],
+  "trailMarkers": [],
+  "trailElevations": [
+    { "point": { "lat": -36.35812, "lng": 146.31245 }, "elev": 172.5, "dist": 0 },
+    { "point": { "lat": -36.35901, "lng": 146.31422 }, "elev": 175.1, "dist": 0.2 },
+    { "point": { "lat": -36.36088, "lng": 146.31801 }, "elev": 178.4, "dist": 0.5 },
+    { "point": { "lat": -36.3615, "lng": 146.3201 }, "elev": 180.0, "dist": 0.7 },
+    { "point": { "lat": -36.3622, "lng": 146.3215 }, "elev": 181.2, "dist": 0.9 }
+  ],
+  "expect": {
+    "trailName": "Murray to Mountains Rail Trail",
+    "filename": "Murray_to_Mountains_Rail_Trail.gpx",
+    "descriptionContains": ["premier rail trails", "Location:", "Length: 116 km", "Surface: Compacted gravel", "Start / End:"],
+    "trkCount": 1,
+    "trksegCount": 2,
+    "waypointCount": 0,
+    "trackPointCount": 5,
+    "allTrackPointsHaveElevation": true
+  }
+}

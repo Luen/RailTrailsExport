@@ -1,0 +1,40 @@
+{
+  "label": "Trail potential (not yet open)",
+  "sourceUrl": "https://www.railtrails.org.au/trails/irwin-track-rail-trail/",
+  "html": "<!DOCTYPE html><html><head><title>Irwin Track Rail Trail – Rail Trails Australia</title></head><body><h2>Irwin Track Rail Trail</h2><div><span class=\"statIcn\">Location:</span><span>Millaa Millaa, Atherton Tablelands, 1350 km from Brisbane</span></div><div><span class=\"statIcn\">Length:</span><span> km</span></div><div><span class=\"statIcn\">Surface:</span><span></span></div><div><span class=\"statIcn\">Start / End:</span><span>Millaa Millaa to Moregatta</span></div><div class=\"custDtlRtCont\"><p>This trail is not yet open</p><p>This trail in the mountains of the Atherton Tablelands would run 5 km from Millaa Millaa to Moregatta, passing farmland and two scenic reserves containing the renowned Millaa Millaa Falls.</p></div></body></html>",
+  "trailPaths": [
+    {
+      "type": "possible_trail",
+      "data": [
+        { "lat": -17.508865230953262, "lng": 145.61466574668884 },
+        { "lat": -17.50829225073322, "lng": 145.6152880191803 },
+        { "lat": -17.47954618928439, "lng": 145.58256568698238 }
+      ]
+    }
+  ],
+  "trailMarkers": [
+    {
+      "lat": -17.508852441236,
+      "lng": 145.61496414244,
+      "des_plain": "Millaa Millaa station site",
+      "des": "Millaa Millaa station site",
+      "elevation": "824 m"
+    }
+  ],
+  "trailElevations": [
+    { "point": { "lat": -17.508865, "lng": 145.614666 }, "elev": 820.71, "dist": 0 },
+    { "point": { "lat": -17.508292, "lng": 145.615288 }, "elev": 815.2, "dist": 0.08 },
+    { "point": { "lat": -17.479546, "lng": 145.582566 }, "elev": 784.11, "dist": 5.4 }
+  ],
+  "expect": {
+    "trailName": "Irwin Track Rail Trail",
+    "filename": "Irwin_Track_Rail_Trail.gpx",
+    "descriptionContains": ["Atherton Tablelands", "Location:", "Start / End: Millaa Millaa to Moregatta"],
+    "descriptionExcludes": ["Length:"],
+    "trkCount": 1,
+    "trksegCount": 1,
+    "waypointCount": 1,
+    "trackPointCount": 3,
+    "allTrackPointsHaveElevation": true
+  }
+}

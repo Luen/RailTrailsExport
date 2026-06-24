@@ -1,4 +1,3 @@
-;(function () {
 const STATUS_INTRO_PATTERN =
     /^(this trail is not yet open|note:\s*this trail is partially open)/i
 
@@ -478,26 +477,17 @@ function downloadGpxResult(result) {
     }, 0)
 }
 
-
-if (window.__railTrailsGpxExportRunning) {
-        return
-    }
-    window.__railTrailsGpxExportRunning = true
-
-    const result = exportTrailGpx({
-        trailPaths: window.trail_paths || [],
-        trailMarkers: window.trail_markers || [],
-        trailElevations: window.trail_elevations || [],
-        trailElevationsDist: window.trail_elevations_dist || [],
-        document: document,
-        trailUrl: window.location.href,
-    })
-
-    if (!result) {
-        alert(getExportFailureMessage(window.location))
-        return
-    }
-
-    downloadGpxResult(result)
-
-})()
+module.exports = {
+    sanitizeInput,
+    getTrailName,
+    getMetaValue,
+    getIntroParagraph,
+    getTrailDescription,
+    buildElevationInterpolator,
+    getTrackName,
+    createGPX,
+    exportTrailGpx,
+    isExporterLandingPage,
+    getExportFailureMessage,
+    TRACK_TYPE_NAMES,
+}

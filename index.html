@@ -58,6 +58,18 @@
             border-radius: 5px;
             font-weight: bold;
         }
+        #dev-notice {
+            display: none;
+            margin: 20px 0;
+            padding: 16px;
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+        }
+        #dev-notice h2 {
+            margin-top: 0;
+            color: #1b5e20;
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -92,30 +104,69 @@
         The RailTrails.org.au GPX Exporter is a simple tool that allows you to extract map data from the RailTrails.org.au website, export it as a GPX file, and download it to your computer. GPX files are widely used for storing GPS track data and can be imported into various mapping and navigation applications.
     </p>
 
+    <div id="dev-notice">
+        <h2>Local development mode</h2>
+        <p>Bookmarklets below load scripts from this server (<strong id="dev-origin"></strong>), not production.</p>
+    </div>
+
     <h2>How to Use</h2>
     <p>
-        To use this tool, simply drag the following link to your bookmarks bar. Then, whenever you're on a RailTrails page with a trail map, click the bookmarklet to download the trail data as a GPX file.
+        Drag the link below to your bookmarks bar. On a RailTrails trail page with the map loaded, click the bookmarklet to download a GPX file.
     </p>
     <p>
-        <a href="javascript:(function()%7Bvar s%3Ddocument.createElement('script')%3Bs.src%3D'https%3A%2F%2Frailtrails.luenwarneke.com%2Fmaptogpx.js'%3Bdocument.body.appendChild(s)%7D)()" class="bookmarklet">RailTrails GPX Exporter</a>
+        <a id="bookmarklet-download" class="bookmarklet" href="#">RailTrails GPX Exporter</a>
     </p>
+    <p id="script-source-note"></p>
 
     <h2>Instructions</h2>
     <ol>
-        <li>Drag the "RailTrails GPX Exporter" link above to your bookmarks bar.</li>
+        <li>Drag the bookmarklet above to your bookmarks bar.</li>
         <li>Go to a trail page on the RailTrails website.</li>
-        <li>Click the bookmarklet in your bookmarks bar.</li>
-        <li>Your GPX file will be automatically downloaded.</li>
+        <li>Click the bookmarklet to download the GPX file.</li>
     </ol>
 </div>
 
 <footer>
     <p>
-        &copy; 2024 RailTrails.org.au GPX Exporter | Created by Luen Warneke
+        &copy; 2026 RailTrails.org.au GPX Exporter | Created by Luen Warneke
         <br>
         <a href="https://github.com/Luen/RailTrailsExport" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </p>
 </footer>
+
+<script>
+(function () {
+    const PROD_BASE = 'https://railtrails.luenwarneke.com'
+    const isLocal =
+        location.hostname === 'localhost' ||
+        location.hostname === '127.0.0.1' ||
+        location.hostname.endsWith('.local')
+    const scriptBase = isLocal ? location.origin : PROD_BASE
+
+    function makeBookmarklet(scriptUrl) {
+        return (
+            'javascript:(function(){var s=document.createElement("script");s.src="' +
+            scriptUrl +
+            '";document.body.appendChild(s)})()'
+        )
+    }
+
+    const downloadScript = scriptBase + '/maptogpx.js'
+
+    document.getElementById('bookmarklet-download').href =
+        makeBookmarklet(downloadScript)
+
+    const sourceNote = document.getElementById('script-source-note')
+    if (isLocal) {
+        document.getElementById('dev-notice').style.display = 'block'
+        document.getElementById('dev-origin').textContent = location.origin
+        sourceNote.textContent = 'Development script: ' + downloadScript
+    } else {
+        sourceNote.textContent =
+            'Production script is loaded from ' + PROD_BASE + '/maptogpx.js'
+    }
+})()
+</script>
 
 </body>
 </html>
